@@ -2,10 +2,12 @@ string = "Hola mundo este es mi string"
 
 
 def quita_espacios(texto):
+    '''Retorna una cadena de caracteres sin espacios'''
     return [char for char in texto if char != " "]
 
 
 def cuenta_caracteres(lista):
+    '''Retorna la cantidad de caracteres que se repiten en la cadena'''
     chars_dict = {}
     for char in lista:
         if char in chars_dict:
@@ -16,6 +18,7 @@ def cuenta_caracteres(lista):
 
 
 def ordena(dict):
+    '''Ordena de manera descendente la cantidad de caracteres que se repiten'''
     return sorted(
         dict.items(),
         key=lambda key: key[1],
@@ -24,6 +27,7 @@ def ordena(dict):
 
 
 def mayores_tuplas(lista):
+    '''Retorna los caracteres con mayor repeticiones'''
     maximo = lista[0][1]
     respuesta = {}
     for orden in lista:
@@ -34,6 +38,7 @@ def mayores_tuplas(lista):
 
 
 def crea_mensaje(diccionario):
+    '''Retorna una cadena de texto que indica la cantidad de repeticiones de cada caracter'''
     mensaje = "Los que más se repite son: \n"
     for key, valor in diccionario.items():
         mensaje += f"- {key} con {valor} repeticiones \n"
